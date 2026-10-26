@@ -136,6 +136,6 @@ npm run build
 
 <p align="center">
   <strong>Traditional Chinese Medical Center (TCMC)</strong><br/>
-  Hargeisa, Somalia Horn of Africa 🇸🇴<br/>
+  Hargeisa, Somaliland Horn of Africa 🇸🇴<br/>
   <em>Promoting Traditional Chinese Medicine. Supporting Better Health.</em>
 </p>
