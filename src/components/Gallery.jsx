@@ -9,45 +9,45 @@ export default function Gallery() {
   const items = [
     {
       id: 1,
-      category: 'interior',
-      image: '/images/clinic-lobby.png',
-      title: 'Luxury Clinic Reception Lounge',
-      tag: 'Lobby Interior'
+      category: 'clinic',
+      image: '/images/shop.png',
+      title: 'Traditional Medical Center Reception & Lounge',
+      tag: 'Clinic Reception'
     },
     {
       id: 2,
-      category: 'interior',
-      image: '/images/hero-dentist.png',
-      title: 'Advanced Surgical Operatory Suite',
-      tag: 'Surgery Suite'
+      category: 'acupuncture',
+      image: '/images/1.png',
+      title: 'Specialized Acupuncture Treatment Suite',
+      tag: 'Acupuncture Care'
     },
     {
       id: 3,
-      category: 'equipment',
-      image: '/images/dental-tech.png',
-      title: '3D Digital Intraoral Scanner',
-      tag: 'CAD/CAM Imaging'
+      category: 'acupuncture',
+      image: '/images/2.png',
+      title: 'Sterile Needles & Moxibustion Setup',
+      tag: 'Therapeutic Protocol'
     },
     {
       id: 4,
-      category: 'results',
-      image: '/images/smile-makeover.png',
-      title: 'Full Cosmetic Veneers Restoration',
-      tag: 'Smile Makeover'
+      category: 'herbal',
+      image: '/images/3.png',
+      title: 'Personalized Chinese Botanical Formulations',
+      tag: 'Herbal Medicine'
     },
     {
       id: 5,
-      category: 'results',
-      image: '/images/patient-consult.png',
-      title: 'Personalized Treatment Mapping Consult',
-      tag: 'Consultation'
+      category: 'acupuncture',
+      image: '/images/4.png',
+      title: 'Cupping Therapy (Hijama) & Acupressure Session',
+      tag: 'Hijama & Massage'
     },
     {
       id: 6,
-      category: 'equipment',
-      image: '/images/porcelain-veneers.png',
-      title: 'Custom Porcelain Veneers & Crowns',
-      tag: 'Aesthetic Tech'
+      category: 'clinic',
+      image: '/images/hero.png',
+      title: 'Private Therapeutic Consultation Suite',
+      tag: 'Consultation Suite'
     }
   ];
 
@@ -56,39 +56,39 @@ export default function Gallery() {
     : items.filter(item => item.category === filter);
 
   const categories = [
-    { key: 'all', label: 'All Media' },
-    { key: 'interior', label: 'Interior Suites' },
-    { key: 'equipment', label: 'Clinical Tech' },
-    { key: 'results', label: 'Smile Results' }
+    { key: 'all', label: 'All Gallery' },
+    { key: 'clinic', label: 'Clinic Facilities' },
+    { key: 'acupuncture', label: 'Acupuncture & Therapy' },
+    { key: 'herbal', label: 'Herbal & Holistic Care' }
   ];
 
   return (
-    <section id="gallery" className="py-10 md:py-16 bg-white overflow-hidden relative">
+    <section id="gallery" className="py-12 md:py-20 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
           <h3 className="text-xs font-black uppercase tracking-widest text-brand-teal">
-            The Facility
+            The Facility & Practice
           </h3>
-          <h2 className="text-3xl sm:text-4xl font-black text-brand-blue leading-tight font-serif">
-            Our Luxury Clinic <span className="green-text">& Gallery</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-brand-navy leading-tight font-serif">
+            Our Clinic <span className="green-text">& Therapeutic Gallery</span>
           </h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full"></div>
-          <p className="text-slate-600 text-base leading-relaxed font-semibold">
-            Explore our state-of-the-art dental clinical suites, equipment details, and real smile transformation outputs. Click any image to preview.
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold">
+            Explore our serene clinical suites, acupuncture therapy rooms, organic herbal preparation facilities, and cupping setups in Hargeisa. Click any image to view details.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-14">
           {categories.map((cat) => (
             <button
               key={cat.key}
               onClick={() => setFilter(cat.key)}
               className={`px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider border transition-all duration-300 ${filter === cat.key
-                  ? 'bg-brand-navy border-brand-navy text-white shadow-lg scale-105'
-                  : 'bg-white border-slate-200 text-brand-navy hover:bg-slate-55'
+                ? 'bg-brand-navy border-brand-navy text-white shadow-lg scale-105'
+                : 'bg-white border-slate-200 text-brand-navy hover:bg-slate-50'
                 }`}
             >
               {cat.label}
@@ -118,6 +118,10 @@ export default function Gallery() {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.classList.add('blue-gradient-bg', 'flex', 'items-center', 'justify-center');
+                  }}
                 />
 
                 {/* Overlap detail block */}
@@ -130,7 +134,7 @@ export default function Gallery() {
 
                   {/* Details */}
                   <div>
-                    <span className="text-[9px] font-black uppercase tracking-wider text-brand-gold-light bg-brand-navy/60 px-3 py-1 rounded-full w-fit mb-2 block">
+                    <span className="text-[9px] font-black uppercase tracking-wider text-brand-gold-light bg-brand-navy/80 px-3 py-1 rounded-full w-fit mb-2 block">
                       {item.tag}
                     </span>
                     <h4 className="text-lg font-black text-white leading-tight">

@@ -5,8 +5,8 @@
   --color-brand-blue: #050816;
   --color-brand-navy: #0B132B;
   --color-brand-navy-light: #1C2541;
-  --color-brand-teal: #0D9488;
-  --color-brand-teal-light: #14B8A6;
+  --color-brand-teal: #2db5eb;
+  --color-brand-teal-light: #5ccbf5;
   --color-brand-gold: #B39252;
   --color-brand-gold-light: #F5DFB3;
   --color-brand-gold-dark: #8E7037;
@@ -64,12 +64,12 @@
 }
 
 .green-text {
-  color: #0F766E;
-  /* Solid Deep Teal Green for luxury clinical highlights */
+  color: #2db5eb;
+  /* Light Blue Brand Highlight */
 }
 
 .teal-gradient-bg {
-  background: linear-gradient(135deg, #0D9488 0%, #14B8A6 100%);
+  background: linear-gradient(135deg, #2db5eb 0%, #1ba3d9 100%);
 }
 
 .blue-gradient-bg {
@@ -131,7 +131,7 @@
 
 .luxury-hover-effect:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(45, 181, 235, 0.25);
 }
 
 /* Custom Scrollbar */
@@ -149,5 +149,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0D9488;
+  background: #2db5eb;
 }

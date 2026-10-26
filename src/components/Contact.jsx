@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, Globe, MessageSquare } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    service: 'Dental Implants',
+    service: 'Acupuncture Therapy',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -19,7 +19,7 @@ export default function Contact() {
         name: '',
         phone: '',
         email: '',
-        service: 'Dental Implants',
+        service: 'Acupuncture Therapy',
         message: '',
       });
     }, 800);
@@ -42,11 +42,11 @@ export default function Contact() {
             The Booking Suite
           </h3>
           <h2 className="text-3xl sm:text-4xl font-black text-brand-blue leading-tight font-serif">
-            Visit Our Clinic & <span className="green-text">Book Consultation</span>
+            Visit Our Center & <span className="green-text">Get in Touch</span>
           </h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full"></div>
           <p className="text-slate-600 text-base leading-relaxed font-semibold">
-            Connect with us to schedule an appointment. We offer comprehensive support, including travel planning coordinates.
+            Connect with Traditional Chinese Medical Center (TCMC) for inquiries, clinical consultations, and professional collaboration.
           </p>
         </div>
 
@@ -58,11 +58,25 @@ export default function Contact() {
 
             <div className="space-y-6">
               <h3 className="text-xl font-black text-brand-navy font-serif tracking-wide">
-                Clinic Location
+                Our Contact Information
               </h3>
 
               <div className="space-y-5">
 
+                {/* Organization */}
+                <div className="flex items-start space-x-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
+                    <Globe className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Organization</h4>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-bold mt-1">
+                      Traditional Chinese Medical Center (TCMC)
+                    </p>
+                  </div>
+                </div>
+
+                {/* Address */}
                 <div className="flex items-start space-x-3.5">
                   <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
                     <MapPin className="w-5 h-5" />
@@ -70,35 +84,60 @@ export default function Contact() {
                   <div>
                     <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Address</h4>
                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      No:126, Cuddalore Road, Thavalakuppam, Puducherry 605007
+                      Hargeisa, Somalia Horn of Africa
                     </p>
                   </div>
                 </div>
 
+                {/* Phone / WhatsApp */}
                 <div className="flex items-start space-x-3.5">
                   <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Phone Call</h4>
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      +91 94435 34244
-                    </p>
+                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Phone / WhatsApp</h4>
+                    <div className="text-xs sm:text-sm text-slate-600 leading-relaxed font-semibold mt-1 space-y-1">
+                      <a href="https://wa.me/252638888131" target="_blank" rel="noopener noreferrer" className="block text-brand-teal hover:underline font-bold">
+                        +252 63 88 88 131
+                      </a>
+                      <a href="tel:+252634507827" className="block hover:text-brand-navy">
+                        +252 63 450 7827
+                      </a>
+                    </div>
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start space-x-3.5">
                   <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Email Inquiry</h4>
+                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Email</h4>
                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      pulpdental@gmail.com
+                      <a href="mailto:infotcmccenter.com" className="hover:text-brand-teal">
+                        infotcmccenter.com
+                      </a>
                     </p>
                   </div>
                 </div>
 
+                {/* Website */}
+                <div className="flex items-start space-x-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
+                    <Globe className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Website</h4>
+                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
+                      <a href="https://tcmccenter.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:underline font-bold">
+                        tcmccenter.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hours of Operation */}
                 <div className="flex items-start space-x-3.5">
                   <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
                     <Clock className="w-5 h-5" />
@@ -106,27 +145,49 @@ export default function Contact() {
                   <div>
                     <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Hours of Operation</h4>
                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      Mon - Sat: 9:30 AM - 1:30 PM, 4:30 PM - 8:30 PM<br />
-                      Sunday: By Appointment Only
+                      Sat - Thu: 7:00 AM - 12:00 PM & 4:00 PM - 6:00 PM<br />
+                      Friday: Closed
                     </p>
                   </div>
                 </div>
 
               </div>
-            </div>
 
-            {/* Styled Map frame */}
-            <div className="rounded-[32px] overflow-hidden shadow-lg border border-slate-200/50 aspect-[4/3] w-full bg-slate-50">
-              <iframe
-                title="Pulp Dental Clinic & Implant Centre Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.4285817882255!2d79.800045!3d11.8752538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53606b00000001%3A0x6b306b3e34a6ef2f!2sCuddalore%20Road%2C%20Thavalakuppam%2C%20Puducherry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                className="w-full h-full border-0"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+              {/* Styled Map frame */}
+              <div className="space-y-3">
+                <div className="rounded-[32px] overflow-hidden shadow-lg border border-slate-200/50 aspect-[4/3] w-full bg-slate-50">
+                  <iframe
+                    title="Traditional Chinese Medical Center Location Map"
+                    src="https://maps.google.com/maps?q=9.5640496,44.0577034&hl=en&z=17&output=embed"
+                    className="w-full h-full border-0"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <a
+                    href="https://wa.me/252638888131"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center space-x-2 py-3 px-4 rounded-2xl bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    <span>WhatsApp: +252 63 88 88 131</span>
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/place/Xarunta+caafimaadka+ee+shiinaha/@9.5640292,44.0576842,17.21z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-2 py-3 px-4 rounded-2xl bg-teal-50 border border-teal-200 text-brand-teal hover:bg-brand-teal hover:text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    <span>Google Maps</span>
+                  </a>
+                </div>
+              </div>
 
+            </div>
           </div>
 
           {/* Right: Booking Card (Executive Suite style) */}
@@ -136,7 +197,7 @@ export default function Contact() {
                 Consultation Request Form
               </h3>
               <p className="text-xs sm:text-sm text-slate-550 mb-8 leading-relaxed font-semibold">
-                Submit details below. Our treatment concierge will contact you to align your preferred scheduling layout.
+                Submit details below. Our clinic team will connect with you promptly to align your preferred consultation schedule.
               </p>
 
               {submitted ? (
@@ -148,7 +209,7 @@ export default function Contact() {
                     Request Received Successfully
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-500 max-w-sm mx-auto leading-relaxed font-semibold">
-                    Thank you. Dr. Senthil’s concierge office will reach out within 2-4 hours to confirm your treatment schedule.
+                    Thank you. Traditional Chinese Medical Center’s team will reach out within 2-4 hours to confirm your consultation schedule.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -172,7 +233,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="e.g. John Doe"
+                      placeholder="e.g. Abdirahman Mohamed"
                       className="w-full bg-white border border-slate-200/60 focus:border-brand-teal focus:ring-1 focus:ring-brand-teal px-4 py-3.5 rounded-xl text-xs sm:text-sm outline-none transition-all font-semibold"
                     />
                   </div>
@@ -183,7 +244,7 @@ export default function Contact() {
                     {/* Phone */}
                     <div>
                       <label htmlFor="phone" className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">
-                        Phone Number
+                        Phone / WhatsApp Number
                       </label>
                       <input
                         type="tel"
@@ -192,7 +253,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        placeholder="e.g. +91 9876543210"
+                        placeholder="e.g. +252 63 88 88 131"
                         className="w-full bg-white border border-slate-200/60 focus:border-brand-teal focus:ring-1 focus:ring-brand-teal px-4 py-3.5 rounded-xl text-xs sm:text-sm outline-none transition-all font-semibold"
                       />
                     </div>
@@ -208,7 +269,7 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="e.g. jdoe@domain.com"
+                        placeholder="e.g. user@example.com"
                         className="w-full bg-white border border-slate-200/60 focus:border-brand-teal focus:ring-1 focus:ring-brand-teal px-4 py-3.5 rounded-xl text-xs sm:text-sm outline-none transition-all font-semibold"
                       />
                     </div>
@@ -218,7 +279,7 @@ export default function Contact() {
                   {/* Select Treatment */}
                   <div>
                     <label htmlFor="service" className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">
-                      Preferred Treatment Category
+                      Preferred Service / Area of Inquiry
                     </label>
                     <select
                       id="service"
@@ -227,20 +288,19 @@ export default function Contact() {
                       onChange={handleChange}
                       className="w-full bg-white border border-slate-200/60 focus:border-brand-teal focus:ring-1 focus:ring-brand-teal px-4 py-3.5 rounded-xl text-xs sm:text-sm outline-none transition-all cursor-pointer font-black text-brand-navy uppercase tracking-wider"
                     >
-                      <option value="Dental Implants">Dental Implants & Rehab</option>
-                      <option value="Full Mouth Rehabilitation">Full Mouth Restoration</option>
-                      <option value="Root Canal Treatment">Root Canal Treatment</option>
-                      <option value="Smile Makeover">Smile Makeover / Designs</option>
-                      <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                      <option value="Teeth Whitening">Teeth Whitening</option>
-                      <option value="General Inquiries">General Consultations</option>
+                      <option value="Acupuncture Therapy">Acupuncture Therapy</option>
+                      <option value="TCM Consultation">TCM Consultation</option>
+                      <option value="Chiropractic Care">Chiropractic Care</option>
+                      <option value="Pain Management">Pain Management</option>
+                      <option value="Health Education">Health Education</option>
+                      <option value="International Cooperation">International Cooperation</option>
                     </select>
                   </div>
 
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">
-                      Medical Message / Travel Details
+                      Medical / Consultation Details
                     </label>
                     <textarea
                       id="message"
@@ -248,7 +308,7 @@ export default function Contact() {
                       rows="4"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="List details regarding previous extractions, scan reports, or if you need travel coordination assistance..."
+                      placeholder="Please share details regarding your health concerns or professional inquiry..."
                       className="w-full bg-white border border-slate-200/60 focus:border-brand-teal focus:ring-1 focus:ring-brand-teal px-4 py-3.5 rounded-xl text-xs sm:text-sm outline-none transition-all resize-none font-semibold"
                     ></textarea>
                   </div>
@@ -259,7 +319,7 @@ export default function Contact() {
                     className="luxury-hover-effect w-full inline-flex items-center justify-center space-x-2 px-8 py-4.5 rounded-xl text-white font-black uppercase tracking-wider shadow-md teal-gradient-bg hover:opacity-95 text-xs sm:text-sm"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Submit Appointment Request</span>
+                    <span>Submit Consultation Request</span>
                   </button>
 
                 </form>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, ShieldCheck, Heart, MessageSquare, ArrowRight, Award } from 'lucide-react';
+import { Star, ShieldCheck, Heart, MessageSquare, ArrowRight, Award, Globe } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -25,7 +25,7 @@ export default function Hero() {
             >
               <span className="w-2.5 h-2.5 rounded-full bg-brand-gold animate-pulse"></span>
               <span className="text-xs font-black uppercase tracking-widest text-brand-gold-dark font-display">
-                Advanced Implantology & Smiles
+                TRADITIONAL CHINESE MEDICAL CENTER (TCMC)
               </span>
             </motion.div>
 
@@ -35,20 +35,39 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, cubicBezier: [0.16, 1, 0.3, 1] }}
-                className="text-[40px] leading-[1.08] sm:text-5xl lg:text-6xl font-black tracking-tight text-brand-blue font-serif"
+                className="text-[38px] leading-[1.1] sm:text-5xl lg:text-6xl font-black tracking-tight text-brand-blue font-serif"
               >
-                Premium Dental <span className="block sm:inline">Implant</span> <br className="hidden sm:inline" />
-                <span className="green-text block sm:inline">& Smile Care</span>
+                Promoting Traditional <br className="hidden sm:inline" />
+                Chinese Medicine. <br className="hidden sm:inline" />
+                <span className="green-text block sm:inline">Supporting Better Health.</span>
               </motion.h1>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, cubicBezier: [0.16, 1, 0.3, 1] }}
-                className="text-lg text-slate-600 max-w-xl leading-relaxed font-medium"
+                className="space-y-4 max-w-xl"
               >
-                Experience world-class full mouth rehabilitation, immediate loading implants, and cosmetic teeth designs under MDS-certified implantologists in Puducherry.
-              </motion.p>
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+                  Bridging time-honored Chinese medical wisdom with compassionate patient care in Hargeisa. From restorative acupuncture to holistic vitality, your journey to natural healing begins here.
+                </p>
+
+                {/* Creative Feature Pills */}
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-brand-navy text-[11px] font-bold tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                    <span>Acupuncture Therapy</span>
+                  </span>
+                  <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-brand-navy text-[11px] font-bold tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                    <span>Patient-Centered Care</span>
+                  </span>
+                  <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-brand-navy text-[11px] font-bold tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                    <span>Global Medical Exchange</span>
+                  </span>
+                </div>
+              </motion.div>
             </div>
 
             {/* Premium CTA Buttons */}
@@ -67,7 +86,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://wa.me/919443534244?text=Hello%20Pulp%20Dental%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation."
+                href="https://wa.me/252638888131"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 px-8 py-4.5 rounded-full bg-white border border-slate-200 text-brand-navy font-black uppercase tracking-wider shadow-md hover:bg-slate-50 transition-all hover:scale-103 text-sm"
@@ -89,8 +108,8 @@ export default function Hero() {
                   <Star className="w-5 h-5 fill-amber-500" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-blue leading-none">4.7★</span>
-                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Google Rating</span>
+                  <span className="block text-2xl font-black text-brand-blue leading-none">4.9★</span>
+                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Patient Trust</span>
                 </div>
               </div>
 
@@ -99,18 +118,18 @@ export default function Hero() {
                   <Heart className="w-5 h-5 fill-brand-teal/20" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-blue leading-none">40+</span>
-                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Happy Reviews</span>
+                  <span className="block text-2xl font-black text-brand-blue leading-none">TCM</span>
+                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Acupuncture Care</span>
                 </div>
               </div>
 
               <div className="flex items-start space-x-2.5">
                 <div className="p-2 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mt-0.5 shadow-sm text-blue-600">
-                  <ShieldCheck className="w-5 h-5" />
+                  <Globe className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-blue leading-none">MDS</span>
-                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Specialist Team</span>
+                  <span className="block text-2xl font-black text-brand-blue leading-none">Global</span>
+                  <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">Cooperation</span>
                 </div>
               </div>
             </motion.div>
@@ -132,9 +151,13 @@ export default function Hero() {
                 className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white aspect-[5/4] sm:aspect-auto sm:h-[480px] w-full"
               >
                 <img
-                  src="/images/hero-dentist.png"
-                  alt="Pulp Dental Clinic luxury operatory suite"
+                  src="/images/hero1.jpg"
+                  alt="Traditional Chinese Medical Center (TCMC)"
                   className="w-full h-full object-cover transform hover:scale-102 transition-transform duration-700"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.classList.add('teal-gradient-bg', 'flex', 'items-center', 'justify-center');
+                  }}
                 />
               </motion.div>
 
@@ -143,14 +166,14 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.5, cubicBezier: [0.16, 1, 0.3, 1] }}
-                className="absolute -top-6 -right-6 glassmorphism p-5 rounded-2xl shadow-2xl border border-brand-gold/30 flex items-center space-x-3.5 max-w-[220px] animate-float-slow"
+                className="absolute -top-6 -right-6 glassmorphism p-5 rounded-2xl shadow-2xl border border-brand-gold/30 flex items-center space-x-3.5 max-w-[240px] animate-float-slow"
               >
                 <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-brand-teal shadow-inner">
                   <Award className="w-6 h-6" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-xl font-black text-brand-blue leading-none">99.2%</h4>
-                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Implant Success</p>
+                  <h4 className="text-xl font-black text-brand-blue leading-none">Hargeisa</h4>
+                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Somalia • Horn of Africa</p>
                 </div>
               </motion.div>
 
@@ -163,7 +186,7 @@ export default function Hero() {
               >
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
                 <span className="text-xs font-black uppercase tracking-wider text-brand-navy">
-                  Accepting Global Patients
+                  WhatsApp: +252 63 88 88 131
                 </span>
               </motion.div>
 

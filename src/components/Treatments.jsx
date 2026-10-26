@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Sparkles,
-  Layers,
-  ShieldCheck,
   Activity,
-  Sun,
-  Crown,
+  UserCheck,
+  Bone,
+  ShieldAlert,
+  GraduationCap,
+  Globe2,
   ArrowRight
 } from 'lucide-react';
 
@@ -14,45 +14,45 @@ export default function Treatments() {
   const treatments = [
     {
       num: '01',
-      icon: <Crown className="w-5 h-5" />,
-      title: 'Dental Implants',
-      description: 'Single or multiple tooth restoration using medical-grade titanium implants with surgical precision templates.',
-      features: ['Immediate Loading Implants', 'Guided Computer Surgery', 'Lifetime Warranty Stamp'],
+      icon: <Activity className="w-5 h-5" />,
+      title: 'Acupuncture Therapy',
+      description: 'Traditional acupuncture treatment for selected health conditions using sterile, single-use ultra-fine needles.',
+      features: ['Selected Health Conditions', 'Sterile Single-Use Needles', 'Meridian & Qi Balancing'],
     },
     {
       num: '02',
-      icon: <Layers className="w-5 h-5" />,
-      title: 'Full Mouth Rehabilitation',
-      description: 'Reconstructing the complete bite structure, restoring masticatory mechanics and facial vertical height.',
-      features: ['All-on-4 / All-on-6 Systems', 'Custom Zirconia Bridges', 'Occlusal Splints & Splines'],
+      icon: <UserCheck className="w-5 h-5" />,
+      title: 'TCM Consultation',
+      description: 'Personalized assessment and traditional Chinese medicine guidance tailored to your individual health constitution.',
+      features: ['Personalized Health Assessment', 'Holistic Diagnostic Evaluation', 'Tailored Care Guidance'],
     },
     {
       num: '03',
-      icon: <Activity className="w-5 h-5" />,
-      title: 'Root Canal Treatment',
-      description: 'Single-visit pain-free procedures employing digital apex locators and advanced micro-rotary files.',
-      features: ['Microscopic Endodontics', 'Apex Locator Accuracy', 'Same-day Zirconia Crowns'],
+      icon: <Bone className="w-5 h-5" />,
+      title: 'Chiropractic Care',
+      description: 'Care for selected musculoskeletal conditions, including back and neck pain, improving posture and joint function.',
+      features: ['Selected Musculoskeletal Conditions', 'Back & Neck Pain Support', 'Spinal & Joint Alignment'],
     },
     {
       num: '04',
-      icon: <Sparkles className="w-5 h-5" />,
-      title: 'Smile Makeover',
-      description: 'Bespoke smile design aligning dental lines, tooth shade, proportions, and gum margins beautifully.',
-      features: ['Digital Smile Design (DSD)', 'Ultra-thin E-Max Veneers', 'Minimal Prep Laminates'],
+      icon: <ShieldAlert className="w-5 h-5" />,
+      title: 'Pain Management',
+      description: 'Support for patients experiencing selected pain-related conditions through integrated, non-invasive therapeutic techniques.',
+      features: ['Selected Pain-Related Conditions', 'Holistic Discomfort Relief', 'Non-Invasive Therapeutic Care'],
     },
     {
       num: '05',
-      icon: <ShieldCheck className="w-5 h-5" />,
-      title: 'Cosmetic Dentistry',
-      description: 'Restorative aesthetic contouring, gum depigmentation, and alignment enhancements.',
-      features: ['Direct Composite Bonding', 'Aesthetic Gum Sculpting', 'Luxury Tooth Artistry'],
+      icon: <GraduationCap className="w-5 h-5" />,
+      title: 'Health Education',
+      description: 'Raising awareness of Traditional Chinese Medicine and patient safety, empowering our community with informed health choices.',
+      features: ['Patient Safety Awareness', 'TCM Knowledge & Guidance', 'Preventative Lifestyle Insights'],
     },
     {
       num: '06',
-      icon: <Sun className="w-5 h-5" />,
-      title: 'Teeth Whitening',
-      description: 'Advanced clinical cold light lasers to lift deep enamel staining safely and immediately.',
-      features: ['Philips Zoom Laser Whitening', 'Zero-Sensitivity Formula', 'Take-home Touch-up Kits'],
+      icon: <Globe2 className="w-5 h-5" />,
+      title: 'International Cooperation',
+      description: 'Promoting professional training, knowledge exchange, and partnerships with Chinese medical institutions and healthcare bodies.',
+      features: ['Chinese Medical Partnerships', 'Professional Clinical Training', 'Knowledge Exchange Programs'],
     },
   ];
 
@@ -72,20 +72,20 @@ export default function Treatments() {
   };
 
   return (
-    <section id="treatments" className="py-10 md:py-16 bg-white overflow-hidden relative">
+    <section id="services" className="py-12 md:py-20 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <h3 className="text-xs font-black uppercase tracking-widest text-brand-teal">
-            The Expertise
+            Our Therapeutic & Professional Services
           </h3>
-          <h2 className="text-3xl sm:text-4xl font-black text-brand-blue leading-tight font-serif">
-            Premium Treatments & <span className="green-text">Implantology</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-brand-navy leading-tight font-serif">
+            Clinical Services & <span className="green-text">Programs</span>
           </h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full"></div>
-          <p className="text-slate-600 text-base leading-relaxed font-semibold">
-            We deliver international standard dental solutions using state-of-the-art procedures and FDA-approved biocompatible implants.
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold">
+            Patient-centered care, traditional therapeutic practices, and international medical cooperation in Hargeisa, Somalia.
           </p>
         </div>
 
@@ -143,9 +143,14 @@ export default function Treatments() {
         </motion.div>
 
         {/* Bottom Callout */}
-        <div className="text-center mt-16 relative z-10">
-          <a href="#contact" className="inline-flex items-center space-x-2 text-sm font-black text-brand-teal hover:text-brand-gold-dark uppercase tracking-wider transition-colors group">
-            <span>Inquire for custom rehabilitation plan</span>
+        <div className="text-center mt-14 relative z-10">
+          <a
+            href="https://wa.me/252638888131"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-sm font-black text-brand-teal hover:text-brand-gold-dark uppercase tracking-wider transition-colors group"
+          >
+            <span>Inquire or schedule a consultation via WhatsApp (+252 63 88 88 131)</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
