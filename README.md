@@ -12,6 +12,8 @@ Welcome to Traditional Chinese Medical Center (TCMC), dedicated to providing pat
 
 Our goal is to connect traditional Chinese medical knowledge with local healthcare needs while promoting professional development and international cooperation.
 
+The public site currently includes **Home, About, Services, Gallery, Testimonials, and Contact**. The **Blog** and **News & Updates** sections are built in the project but are hidden from the live homepage, navigation, and footer.
+
 ---
 
 ## 🩺 Services Offered
@@ -81,17 +83,20 @@ TCMC-Website/
 │   └── images/             # Clinic photos, hero images, logos
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx       # Header navigation, brand logo & WhatsApp CTA
+│   │   ├── Navbar.jsx       # Header navigation (Home, About, Services, Gallery, Contact)
 │   │   ├── Hero.jsx         # Luxury hero with official tagline and mission statement
 │   │   ├── About.jsx        # Who We Are, Our Mission & Core Principles
 │   │   ├── Treatments.jsx   # 6 core TCMC clinical services and programs
-│   │   ├── NewsUpdates.jsx  # Clinic announcements, suites & community drives
 │   │   ├── Gallery.jsx      # Filterable facilities and treatment photo gallery
 │   │   ├── Testimonials.jsx # Swipeable poker-card reviews from patients
-│   │   ├── Blog.jsx         # Educational TCM articles & modalities
 │   │   ├── Contact.jsx      # Consultation request form, map & contact info
-│   │   └── Footer.jsx       # Complete footer with branding, hours & quick links
-│   ├── App.jsx              # Main layout combining all sections
+│   │   ├── Footer.jsx       # Complete footer with branding, hours & quick links
+│   │   ├── NewsUpdates.jsx  # Hidden for now — clinic announcements
+│   │   └── Blog.jsx         # Hidden for now — educational TCM articles
+│   ├── pages/
+│   │   ├── NewsPage.jsx     # Hidden for now — full news listing
+│   │   └── BlogPage.jsx     # Hidden for now — full blog listing
+│   ├── App.jsx              # Main layout (Blog and News sections not rendered)
 │   ├── main.jsx             # React entry point
 │   └── index.css            # Brand theme tokens (#2db5eb), typography & animations
 ├── index.html               # Document title, SEO description & logo1 favicon
@@ -118,7 +123,7 @@ TCMC-Website/
 
 ```bash
 # Navigate to project directory
-cd Dental_clinic
+cd tcmc
 
 # Install dependencies
 npm install

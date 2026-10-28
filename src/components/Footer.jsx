@@ -8,9 +8,7 @@ export default function Footer() {
     { name: 'Home', href: '#home' },
     { name: 'About Center', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'News & Update', href: '#news' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
   ];
 
