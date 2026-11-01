@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, MessageSquare, Clock, Globe } from 'lucide-react';
-import FacebookIcon from './FacebookIcon';
+import SocialLinks from './SocialIcons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -57,7 +57,7 @@ export default function Footer() {
             </p>
 
             {/* WhatsApp Link Button */}
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="space-y-3">
               <a
                 href="https://wa.me/252638888131"
                 target="_blank"
@@ -67,15 +67,7 @@ export default function Footer() {
                 <MessageSquare className="w-4 h-4" />
                 <span>WhatsApp: +252 63 88 88 131</span>
               </a>
-              <a
-                href="https://www.facebook.com/XaruntaCaafimaadkaEeShiinaha"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#1877F2]/20 border border-[#1877F2]/40 text-[#4b9cff] hover:bg-[#1877F2] hover:text-white transition-all"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
+              <SocialLinks />
             </div>
           </div>
 
@@ -139,8 +131,8 @@ export default function Footer() {
 
               <li className="flex items-center space-x-3 text-slate-450">
                 <Mail className="w-5 h-5 text-brand-teal shrink-0" />
-                <a href="mailto:infotcmccenter.com" className="text-xs sm:text-sm font-semibold hover:text-white">
-                  infotcmccenter.com
+                <a href="mailto:info@tcmccenter.com" className="text-xs sm:text-sm font-semibold hover:text-white">
+                  info@tcmccenter.com
                 </a>
               </li>
 

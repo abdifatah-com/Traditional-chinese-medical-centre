@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, Globe, MessageSquare } from 'lucide-react';
-import FacebookIcon from './FacebookIcon';
+import SocialLinks from './SocialIcons';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -116,8 +116,8 @@ export default function Contact() {
                   <div>
                     <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Email</h4>
                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      <a href="mailto:infotcmccenter.com" className="hover:text-brand-teal">
-                        infotcmccenter.com
+                      <a href="mailto:info@tcmccenter.com" className="hover:text-brand-teal">
+                        info@tcmccenter.com
                       </a>
                     </p>
                   </div>
@@ -138,23 +138,11 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Facebook */}
+                {/* Social */}
                 <div className="flex items-start space-x-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-brand-teal shrink-0">
-                    <FacebookIcon className="w-5 h-5" />
-                  </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider">Facebook</h4>
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-semibold mt-1">
-                      <a
-                        href="https://www.facebook.com/XaruntaCaafimaadkaEeShiinaha"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-brand-teal hover:underline font-bold"
-                      >
-                        XaruntaCaafimaadkaEeShiinaha
-                      </a>
-                    </p>
+                    <h4 className="text-xs font-black uppercase text-brand-navy tracking-wider mb-2">Social</h4>
+                    <SocialLinks tone="light" />
                   </div>
                 </div>
 
